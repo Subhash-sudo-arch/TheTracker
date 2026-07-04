@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+
+    <!-- Background shadow gradient effect -->
+    <path
+        android:fillColor="#15000000"
+        android:pathData="M 32 32 L 80 80 L 80 32 Z" />
+
+    <!-- Column Bar 1 -->
+    <path
+        android:fillColor="#B2DFDB"
+        android:pathData="M 32 54 L 40 54 L 40 76 L 32 76 Z" />
+
+    <!-- Column Bar 2 -->
+    <path
+        android:fillColor="#80CBC4"
+        android:pathData="M 48 38 L 56 38 L 56 76 L 48 76 Z" />
+
+    <!-- Column Bar 3 -->
+    <path
+        android:fillColor="#26A69A"
+        android:pathData="M 64 46 L 72 46 L 72 76 L 64 76 Z" />
+
+    <!-- Overlaid elegant white checkmark -->
+    <path
+        android:fillColor="#00000000"
+        android:strokeColor="#FFFFFF"
+        android:strokeWidth="6"
+        android:strokeLineCap="round"
+        android:strokeLineJoin="round"
+        android:pathData="M 28 54 L 44 70 L 78 36" />
+</vector>

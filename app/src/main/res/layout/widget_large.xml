@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/widget_bg_dark"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <!-- Header Row -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="12dp">
+
+        <TextView
+            android:id="@+id/widget_title_large"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:text="TheTracker Stats"
+            android:textColor="#FFFFFF"
+            android:textStyle="bold"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/widget_streak"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:text="🔥 0 DAYS"
+            android:textColor="#FF9800"
+            android:textStyle="bold"
+            android:textSize="11sp" />
+    </RelativeLayout>
+
+    <!-- Middle: Split layout (Progress Ring left, Goals Progress right) -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1.1"
+        android:orientation="horizontal"
+        android:layout_marginBottom="12dp">
+
+        <!-- Progress ring (Left) -->
+        <FrameLayout
+            android:layout_width="84dp"
+            android:layout_height="84dp"
+            android:layout_gravity="center"
+            android:layout_marginEnd="16dp">
+
+            <ProgressBar
+                android:id="@+id/widget_progress_bar"
+                style="?android:attr/progressBarStyleHorizontal"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:indeterminate="false"
+                android:max="100"
+                android:progress="0"
+                android:progressDrawable="@drawable/widget_progress_circle" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:orientation="vertical"
+                android:gravity="center">
+
+                <TextView
+                    android:id="@+id/widget_progress_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="0%"
+                    android:textColor="#FFFFFF"
+                    android:textStyle="bold"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="DONE"
+                    android:textColor="#8F8F9F"
+                    android:textStyle="bold"
+                    android:textSize="8sp"
+                    android:letterSpacing="0.05" />
+            </LinearLayout>
+        </FrameLayout>
+
+        <!-- Divider line -->
+        <View
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:background="#252535"
+            android:layout_marginTop="4dp"
+            android:layout_marginBottom="4dp" />
+
+        <!-- Goals list (Right) -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:gravity="center_vertical"
+            android:paddingStart="16dp">
+
+            <TextView
+                android:id="@+id/txt_goal_sleep"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="🌙 Sleep: 0.0h / 8.0h"
+                android:textColor="#DFDFEF"
+                android:textSize="11sp"
+                android:layout_marginBottom="4dp" />
+
+            <TextView
+                android:id="@+id/txt_goal_study"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="📚 Study: 0.0h / 4.0h"
+                android:textColor="#DFDFEF"
+                android:textSize="11sp"
+                android:layout_marginBottom="4dp" />
+
+            <TextView
+                android:id="@+id/txt_goal_workout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="🏋 Workout: 0.0h / 1.0h"
+                android:textColor="#DFDFEF"
+                android:textSize="11sp"
+                android:layout_marginBottom="4dp" />
+
+            <TextView
+                android:id="@+id/txt_goal_productivity"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="💼 Work: 0.0h / 6.0h"
+                android:textColor="#DFDFEF"
+                android:textSize="11sp"
+                android:layout_marginBottom="4dp" />
+
+            <TextView
+                android:id="@+id/txt_goal_habit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="✅ Habit: 0.0h / 1.0h"
+                android:textColor="#DFDFEF"
+                android:textSize="11sp" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <!-- Recent Achievement Row -->
+    <LinearLayout
+        android:id="@+id/layout_achievement"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="#151A2E"
+        android:padding="8dp"
+        android:gravity="center_vertical"
+        android:layout_marginBottom="12dp">
+
+        <TextView
+            android:id="@+id/txt_achievement_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="🏆"
+            android:textSize="14sp"
+            android:layout_marginEnd="6dp" />
+
+        <TextView
+            android:id="@+id/txt_achievement_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Keep tracking to unlock achievements!"
+            android:textColor="#82B1FF"
+            android:textStyle="bold"
+            android:textSize="10sp" />
+    </LinearLayout>
+
+    <!-- Bottom: Action Buttons (Sleep, Study, Workout) -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="36dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/btn_large_sleep"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:layout_marginEnd="6dp"
+            android:background="@drawable/widget_btn_inactive"
+            android:gravity="center"
+            android:text="🌙 Sleep"
+            android:textColor="#FFFFFF"
+            android:textSize="11sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/btn_large_study"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:layout_marginEnd="6dp"
+            android:background="@drawable/widget_btn_inactive"
+            android:gravity="center"
+            android:text="📚 Study"
+            android:textColor="#FFFFFF"
+            android:textSize="11sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/btn_large_workout"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/widget_btn_inactive"
+            android:gravity="center"
+            android:text="🏋 Workout"
+            android:textColor="#FFFFFF"
+            android:textSize="11sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+</LinearLayout>

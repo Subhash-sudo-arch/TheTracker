@@ -1,0 +1,6 @@
+{
+  "name": "TheTracker",
+  "description": "A premium, offline-first, privacy-focused life tracking application to monitor sleep, study, productivity, workout, activity, training, and habits with beautiful statistics, calendar, and achievements.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

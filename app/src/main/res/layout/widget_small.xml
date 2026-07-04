@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/widget_bg_dark"
+    android:padding="12dp">
+
+    <!-- Header label -->
+    <TextView
+        android:id="@+id/widget_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:text="TODAY"
+        android:textColor="#8F8F9F"
+        android:textStyle="bold"
+        android:textSize="10sp"
+        android:letterSpacing="0.1" />
+
+    <!-- Stacked Progress Circle & Text -->
+    <FrameLayout
+        android:id="@+id/progress_container"
+        android:layout_width="64dp"
+        android:layout_height="64dp"
+        android:layout_below="@id/widget_title"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="6dp">
+
+        <ProgressBar
+            android:id="@+id/widget_progress_bar"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:indeterminate="false"
+            android:max="100"
+            android:progress="0"
+            android:progressDrawable="@drawable/widget_progress_circle" />
+
+        <TextView
+            android:id="@+id/widget_progress_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="0%"
+            android:textColor="#FFFFFF"
+            android:textStyle="bold"
+            android:textSize="14sp" />
+    </FrameLayout>
+
+    <!-- Quick Action Button -->
+    <TextView
+        android:id="@+id/btn_quick_action"
+        android:layout_width="match_parent"
+        android:layout_height="36dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/widget_btn_inactive"
+        android:gravity="center"
+        android:text="📚 Study"
+        android:textColor="#FFFFFF"
+        android:textSize="11sp"
+        android:textStyle="bold" />
+</RelativeLayout>

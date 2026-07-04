@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:aapt="http://schemas.android.com/aapt"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+
+    <!-- Subtle background shadow gradient effect -->
+    <path
+        android:fillColor="#15000000"
+        android:pathData="M 32 32 L 80 80 L 80 32 Z" />
+
+    <!-- Unfilled background progress track ring (Gray) -->
+    <path
+        android:fillColor="#00000000"
+        android:strokeColor="#4A4A5A"
+        android:strokeWidth="6"
+        android:strokeLineCap="round"
+        android:pathData="M 54 20 A 34 34 0 1 1 53.99 20" />
+
+    <!-- 25% Active Progress Ring -->
+    <path
+        android:fillColor="#00000000"
+        android:strokeWidth="6"
+        android:strokeLineCap="round"
+        android:trimPathEnd="0.25"
+        android:pathData="M 54 20 A 34 34 0 1 1 53.99 20">
+        <aapt:attr name="android:strokeColor">
+            <gradient
+                android:startX="20"
+                android:startY="20"
+                android:endX="88"
+                android:endY="88"
+                android:type="linear">
+                <item android:color="#7F00FF" android:offset="0.0"/>
+                <item android:color="#00E5FF" android:offset="1.0"/>
+            </gradient>
+        </aapt:attr>
+    </path>
+
+    <!-- Center Check Mark (✓) -->
+    <path
+        android:fillColor="#00000000"
+        android:strokeColor="#FFFFFF"
+        android:strokeWidth="6"
+        android:strokeLineCap="round"
+        android:strokeLineJoin="round"
+        android:pathData="M 38 54 L 48 64 L 70 42" />
+</vector>
